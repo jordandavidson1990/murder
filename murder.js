@@ -12,7 +12,7 @@ const declareMurderer = function() {
 const verdict = declareMurderer();
 console.log(verdict);
 
-// This declares 'The murderer is Miss Scarlet' because declareMurderer can see scenario const.
+This declares 'The murderer is Miss Scarlet' because declareMurderer can see scenario const.
 
 2.
 const murderer = 'Professor Plum';
@@ -129,7 +129,7 @@ const changeMurderer = function() { //opening bracket
 
   const plotTwist = function() {
     let murderer = 'Colonel Mustard';
-    //Colonel Mustard is murderer outside of function
+    // Colonel Mustard is murderer outside of function
 
     const unexpectedOutcome = function() {
       murderer = 'Miss Scarlet';
@@ -206,3 +206,22 @@ const declareMurderer = function() {
 const verdict = declareMurderer();
 console.log(verdict);
 //professor plum as if statement isnt wrapped in a variable
+
+10.
+const scenario = {
+  murderer: 'Colonel Mustard',
+  room: 'Living Room',
+  weapon: 'Lead Pipe'
+};
+
+const changeMurderer = function(newMurderer) {
+  scenario.murderer = newMurderer;
+}
+
+const declareMurderer = function() {
+  return `The weapon is the ${scenario.murderer}.`;
+}
+
+changeMurderer('Mrs. Peacock');
+const verdict = declareMurderer();
+console.log(verdict);
